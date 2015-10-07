@@ -17,3 +17,25 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+
+String.prototype.repeat = function(times) {
+   return (new Array(times + 1)).join(this);
+};
+
+$(function(){
+	// Toggling Buttons
+	var togglingButtonSelector = ".toggling-button",
+			$togglingButtons       =  $(togglingButtonSelector)
+	$togglingButtons.on("click", function(e){
+		var $button  = $(e.currentTarget),
+				target   = $button.attr("target"),
+				$content = $("#" + String(target))
+		$content.toggleClass("hidden")
+		if ($content.hasClass("hidden")) {
+			$button.text($button.text().replace(" (close)", ""))
+		} else { $button.text($button.text() + " (close)") }
+	})
+	$togglingButtons.each(function(index, button){
+		$(button).trigger("click")
+	})
+})

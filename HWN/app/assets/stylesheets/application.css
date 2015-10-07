@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ .hidden {
+	display: none;
+	opacity: 0;
+	height: 0;
+	visibility: hidden;
+	width: 0;
+	color: green;
+	z-index: -1;
+}
+
+marquee {
+	font-family: Monospace
+}
