@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :services
   resources :items
   root to: 'pages#root'
