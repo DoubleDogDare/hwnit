@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @business.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @business.description %>
+</p>
+
+<p>
+  <strong>Submitter:</strong>
+  <%= @business.submitter_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @business.location %>
+</p>
+
+<p>
+  <strong>Opens at:</strong>
+  <%= @business.opens_at %>
+</p>
+
+<p>
+  <strong>Closes at:</strong>
+  <%= @business.closes_at %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @business.link %>
+</p>
+
+<%= link_to 'Edit', edit_business_path(@business) %> |
+<%= link_to 'Back', businesses_path %>
