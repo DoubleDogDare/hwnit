@@ -10,7 +10,8 @@
       - about page
       - instructions
       - legal page
-  - Goods and Services
+  - Goods
+  - Services
   - Auth
       - Google, Facebook, Email
   - Members
