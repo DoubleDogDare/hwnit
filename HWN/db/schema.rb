@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007225959) do
+ActiveRecord::Schema.define(version: 20151007230306) do
+
+  create_table "businesses", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "submitter_id"
+    t.string   "location"
+    t.string   "opens_at"
+    t.string   "closes_at"
+    t.text     "link"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -32,6 +44,18 @@ ActiveRecord::Schema.define(version: 20151007225959) do
     t.string   "currency"
     t.integer  "submitter_id"
     t.text     "images"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "resources", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "link"
+    t.integer  "submitter_id"
+    t.string   "opens_at"
+    t.string   "closes_at"
+    t.string   "location"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resource.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @resource.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @resource.link %>
+</p>
+
+<p>
+  <strong>Submitter:</strong>
+  <%= @resource.submitter_id %>
+</p>
+
+<p>
+  <strong>Opens at:</strong>
+  <%= @resource.opens_at %>
+</p>
+
+<p>
+  <strong>Closes at:</strong>
+  <%= @resource.closes_at %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @resource.location %>
+</p>
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>
