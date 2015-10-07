@@ -1,6 +1,10 @@
 Rails.application.configure do
 
-  config.react.variant = :development
+    #Devise
+     config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+    #React
+      config.react.variant = :development
 
   # Settings specified here will take precedence over those in config/application.rb.
 
