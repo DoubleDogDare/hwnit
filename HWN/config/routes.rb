@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#root'
+  devise_for :users
+  get "donate", to: "pages#donate"
+  get "contact", to: "pages#contact"
+  get "about", to: "pages#about"
+  get "legal", to: "pages#legal"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
