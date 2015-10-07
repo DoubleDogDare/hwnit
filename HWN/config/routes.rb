@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   resources :items
   root to: 'pages#root'
   devise_for :users
