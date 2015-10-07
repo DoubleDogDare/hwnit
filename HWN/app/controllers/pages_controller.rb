@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def root
-  	# @text = ApplicationHelper.send(:toggler, {title: "asd", content: "asd"})
+  	unless current_user
+  		redirect_to new_user_registration_url
+  	end
   end
 end
