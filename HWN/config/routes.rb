@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :groups
   resources :resources
   resources :businesses
   resources :events
@@ -6,10 +7,10 @@ Rails.application.routes.draw do
   resources :items
   root to: 'pages#root'
   devise_for :users
-  get "donate", to: "pages#donate"
-  get "contact", to: "pages#contact"
-  get "about", to: "pages#about"
-  get "legal", to: "pages#legal"
+  get "donate", to: "pages#donate", as: :donate
+  get "contact", to: "pages#contact", as: :contact
+  get "about", to: "pages#about", as: :about
+  get "legal", to: "pages#legal", as: :legal
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
